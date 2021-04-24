@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Nothing+You+Could+Do&family=Pacifico&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration-line: none;
+}
+
+:root {
+    --font-primary: "Pacifico", cursive;
+    --font-secondary: "Nothing You Could Do", cursive;
+    --font-action: "Caveat", cursive;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    /* VH significa Visual Height, e basicamente se refere a distancia vertical que fica na tela quando ela é aberta. Pegar 100% significa que quando a tela abrir, independente do lugar que for aberta, ela vai pegar 100% do frame inicial de abertura do site.*/
+    overflow: hidden;
+    /* Ele desabilita a possibilidade de o nosso cabeçalho passar do tamanho da janela, impedindo que gere assim uma barra de rolagem horizontal */
+    /* position: relative; */
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    background: #FF6B5B;
+    /* border: #000 solid 5px; */
+    top: 0;
+    position: fixed;
+    z-index: 2;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    padding-right: 20px;
+    font-family: var(--font-action);
+}
+
+.menu a {
+    padding: 40px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.menu__hamburguer {
+    display: none;
+}
+
+.social-media {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .menu {
+        height: 70px;
+    }
+    .menu ul {
+        position: fixed;
+        margin-top: 0;
+        top: 0;
+        bottom: 0;
+        overflow: hidden;
+        z-index: 2;
+        width: 40%;
+        height: 100vh;
+        background: #ffffff;
+        right: -100%;
+        padding: 0;
+        padding-top: 20px;
+        text-align: center;
+        justify-content: space-around;
+        display: flex;
+        flex-direction: column;
+        transition: all .5s;
+    }
+    .menu ul li {
+        margin: 60px 0 0 0;
+        line-height: 30px;
+    }
+    .menu ul li a {
+        color: #0893B8;
+    }
+    .menu a:hover {
+        color: #F2B705;
+    }
+    .menu__hamburguer:checked~ul {
+        right: 0;
+    }
+    label.check-btn,
+    label.check-btn::before,
+    label.check-btn::after {
+        position: absolute;
+        width: 30px;
+        height: 5px;
+        border-radius: 5px;
+        background: #ffffff;
+        z-index: 3;
+        transition: .5s;
+    }
+    label.check-btn {
+        cursor: pointer;
+        top: 40px;
+        right: 50px;
+    }
+    label.check-btn::before {
+        content: "";
+        transform: translateY(-10px);
+    }
+    label.check-btn::after {
+        content: "";
+        transform: translateY(10px);
+    }
+    .menu__hamburguer:checked+label.check-btn {
+        width: 0;
+        right: 90px;
+    }
+    .menu__hamburguer:checked+label.check-btn::before {
+        transform: rotate(45deg);
+        background: #F2B705;
+    }
+    .menu__hamburguer:checked+label.check-btn::after {
+        transform: rotate(-45deg);
+        background: #F2B705;
+    }
+    .social-media {
+        display: flex;
+        justify-content: space-around;
+    }
+    .social-media a {
+        color: #0893B8;
+        padding: 10px;
+        font-size: 30px;
+    }
+}
