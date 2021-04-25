@@ -1,0 +1,13 @@
+{
+    "condominio": [
+      {
+        "nome": "",
+        "CEP": "",
+        "UF": "",
+        "Cidade":"",
+        "Bairro":"",
+        "Rua":"",
+        "Número":123
+      }
+    ]
+  }

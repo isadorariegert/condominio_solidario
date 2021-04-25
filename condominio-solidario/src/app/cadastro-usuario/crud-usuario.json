@@ -1,0 +1,15 @@
+{
+    "usuario": [
+      {
+        "IdUsuario": "",
+        "IdCondominio": "",
+        "Administrator": "",
+        "Ativo":"",
+        "Nome":"",
+        "Bloco":"",
+        "Apartamento":123,
+        "Telefone":123,
+        "Documento":""
+      }
+    ]
+  }
