@@ -3,18 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { Cadastro2CondominioComponent } from './cadastro-condominio/cadastro2condominio.component';
+import { CadastroCondominioComponent } from './cadastro-condominio/cadastro-condominio.component';
+import { routing } from './app.routing';
+import { CrudService } from './cadastro-condominio/crud.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    Cadastro2CondominioComponent
+    CadastroCondominioComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    routing
   ],
-  providers: [],
+  providers: [
+    CrudService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

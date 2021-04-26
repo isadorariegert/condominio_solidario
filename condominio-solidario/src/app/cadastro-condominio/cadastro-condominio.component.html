@@ -1,1 +1,8 @@
-<p>cadastro-condominio works!</p>
+<h1>Listagem!</h1>
+<p>Condominios</p>
+<h3>All registers:</h3>
+<ul>
+    <li *ngFor="let condominio of condominios">
+        ID:&nbsp;{{condominio.IdCondominio}} - Nome:&nbsp;{{condominio.Nome}} - Cidade:&nbsp;{{condominio.Cidade}} - Bairro:&nbsp;{{condominio.Bairro}} 
+    </li>
+</ul>

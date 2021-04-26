@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { delay, tap, take } from 'rxjs/operators';
+import { Injectable } from '@angular/core';
 
+@Injectable()
 export class CrudService<T> {
 
   constructor(protected http: HttpClient, private API_URL) {}

@@ -5,5 +5,6 @@ export interface CadastroCondominio {
     Cidade:string,
     Bairro:string,
     Rua:string,
-    Número:number
+    Número:number,
+    IdCondominio: number
   }

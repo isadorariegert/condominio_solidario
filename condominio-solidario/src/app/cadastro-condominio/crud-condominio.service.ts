@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment';
 })
 export class CrudService {
 
-  private readonly API = `${environment.API}cursos`;
+  private readonly API = `${environment.backendBaseUri}cursos`;
 
   constructor(private http: HttpClient) { }
 

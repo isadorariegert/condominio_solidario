@@ -10,7 +10,7 @@ import { environment } from '../../environments/environment';
 export class Cadastro2Usuario extends CrudService<CadastroUsuario> {
 
   constructor(protected http: HttpClient) {
-    super(http, `${environment.API}CadastroUsuario`);
+    super(http, `${environment.backendBaseUri}CadastroUsuario`);
   }
 
   loadByID(id) {
